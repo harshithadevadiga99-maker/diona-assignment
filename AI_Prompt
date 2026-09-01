@@ -1,0 +1,55 @@
+I have two reference PDFs for a frontend assignment:
+
+1. Worker Progress Report
+2. Medical & Travel Expense Request
+
+Build both documents using only HTML, CSS and vanilla JavaScript.
+
+Analyze the PDFs carefully and reproduce their layout as closely as possible, including:
+
+- Header and WCB logo
+- Titles and claim number
+- All sections and fields
+- Tables
+- Checkboxes/selections
+- Dynamic data
+- Footer
+- Worker App ID
+- Submitted date/time
+- Page numbers
+- Correct spacing, borders, fonts and alignment
+
+Make all appropriate data dynamic using JavaScript objects/arrays. Tables must support 1, 5, 10+ rows without breaking the layout.
+
+The browser should allow me to change data, add/remove rows and demonstrate different datasets.
+
+The final document must print/export cleanly to A4 PDF using the browser's Print → Save as PDF.
+
+Use proper CSS page breaks and make sure content does not overlap, especially when tables or sections become longer.
+
+Keep the project organized:
+
+index.html
+worker-progress.html
+medical-expense.html
+style.css
+worker-progress.js
+medical-expense.js
+assets/
+README.md
+AI_PROMPTS.md
+
+Also create README.md with:
+- Project overview
+- Technologies
+- How to run
+- Dynamic data explanation
+- Assumptions
+- Challenges and solutions
+- AI usage
+
+Create AI_PROMPTS.md to record the AI prompts used during development.
+
+Do not create a generic form or simply use the PDF as a background image. The actual content must be generated using HTML, CSS and JavaScript.
+
+After creating it, compare the result with both PDFs and fix any layout, pagination, dynamic-data or printing issues.
