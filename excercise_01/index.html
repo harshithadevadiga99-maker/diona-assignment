@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Worker Progress Report</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="toolbar no-print">
+  <div><b>Worker Progress Report</b><span>Reference-aligned dynamic PDF</span></div>
+  <div class="toolbar-actions">
+    <button id="editBtn">Edit PDF</button>
+    <button id="resetBtn">Reset</button>
+    <button id="savePdfBtn">Save PDF</button>
+  </div>
+</header>
+
+<section id="editor" class="editor no-print hidden">
+  <div class="editor-top">
+    <div><b>Edit dynamic fields</b><small>All changes are reflected in the reference layout and in the generated PDF.</small></div>
+    <button id="closeBtn">Close</button>
+  </div>
+  <div class="fields">
+    <div class="group-title">Page 1 — Worker / Return to Work / Recovery</div>
+    <label>Worker name<input data-field="workerName"></label>
+    <label>Claim number<input data-field="claimNo"></label>
+    <label>Return date<input data-field="returnDate"></label>
+    <label>Return-to-work comment<input data-field="returnComment"></label>
+    <label>Other working value<input data-field="otherWorking"></label>
+    <label>Expected return date<input data-field="expectedReturn"></label>
+    <label>Return-to-work concerns<textarea data-field="concerns"></textarea></label>
+    <label>Employer contact<input data-field="employerContact"></label>
+    <label>Employer contact date<input data-field="employerDate"></label>
+    <label>Recovery comments<textarea data-field="recoveryComments"></textarea></label>
+    <div class="group-title">Page 2 — Recovery / Medical / Exercises / Other Information</div>
+    <label>Pain score 1–10<input type="number" min="1" max="10" data-field="pain"></label>
+    <label>Medical provider type<input data-field="providerType"></label>
+    <label>Last treatment date<input data-field="lastDate"></label>
+    <label>Last provider<input data-field="lastProvider"></label>
+    <label>Next treatment date<input data-field="nextDate"></label>
+    <label>Next provider<input data-field="nextProvider"></label>
+    <label>Frequency<input data-field="frequency"></label>
+    <label>Medication<input data-field="medication"></label>
+    <label>Exercises<textarea data-field="exercises"></textarea></label>
+    <label>Other information<textarea data-field="other"></textarea></label>
+    <label>Worker App ID<input data-field="appId"></label>
+    <label>Submitted<input data-field="submitted"></label>
+    <div class="group-title">Page 3 — Certification</div>
+  </div>
+  <div class="choice-groups">
+    <div><b>Return to work</b>
+      <button data-choice="returnStatus" data-value="not_missed">Not missed</button>
+      <button data-choice="returnStatus" data-value="not_returned">Not returned</button>
+      <button data-choice="returnStatus" data-value="returned">Returned</button>
+    </div>
+    <div><b>Working</b>
+      <button data-choice="workingStatus" data-value="Full duties, regular hours">Full / regular</button>
+      <button data-choice="workingStatus" data-value="Full duties, reduced hours">Full / reduced</button>
+      <button data-choice="workingStatus" data-value="Modified duties, regular hours">Modified / regular</button>
+      <button data-choice="workingStatus" data-value="Modified duties, reduced hours">Modified / reduced</button>
+      <button data-choice="workingStatus" data-value="Other">Other</button>
+    </div>
+    <div><b>Recovery</b>
+      <button data-choice="recovery" data-value="not_recovered">Not recovered</button>
+      <button data-choice="recovery" data-value="recovered">Recovered</button>
+    </div>
+    <div><b>Medical</b>
+      <button data-choice="treatment" data-value="not_continuing">Not continuing</button>
+      <button data-choice="treatment" data-value="continuing">Continuing</button>
+    </div>
+    <div><b>Medication</b>
+      <button data-choice="medicationStatus" data-value="not_taking">Not taking</button>
+      <button data-choice="medicationStatus" data-value="taking">Taking</button>
+    </div>
+    <div><b>Exercises</b>
+      <button data-choice="exerciseStatus" data-value="not_doing">Not doing</button>
+      <button data-choice="exerciseStatus" data-value="doing">Doing</button>
+    </div>
+    <div><b>Certification</b>
+      <button data-choice="certify" data-value="true">Certification ✓</button>
+      <button data-choice="privacy" data-value="true">Privacy Notice ✓</button>
+    </div>
+  </div>
+</section>
+
+<main id="report"></main>
+<script src="script.js"></script>
+</body>
+</html>
