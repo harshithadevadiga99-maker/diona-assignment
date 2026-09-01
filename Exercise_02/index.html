@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Medical & Travel Expense Request</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="toolbar no-print">
+  <div class="brand"><strong>Medical &amp; Travel Expense Request</strong><span>Exact reference PDF • Dynamic editor</span></div>
+  <div class="actions"><button id="reset">Reset</button><button id="edit">Edit PDF</button><button id="savePdf">Save PDF</button></div>
+</header>
+<div id="panel" class="panel no-print hidden">
+  <div class="panel-title"><div><strong>Edit dynamic PDF data</strong><small>Changes appear immediately on the reference layout.</small></div><button id="close">Close</button></div>
+  <div class="fields">
+    <label>Worker name<input data-field="workerName"></label><label>Claim number<input data-field="claimNo"></label>
+    <label>Worker App ID<input data-field="appId"></label><label>Submitted<input data-field="submitted"></label>
+  </div>
+  <div class="editor-section"><h3>Prescription Drugs</h3><div id="prescriptionEditor"></div><button class="add" data-add="prescription">+ Add row</button></div>
+  <div class="editor-section"><h3>Over-the-Counter Drugs</h3><div id="otcEditor"></div><button class="add" data-add="otc">+ Add row</button></div>
+  <div class="editor-section"><h3>Medical Supplies</h3><div id="suppliesEditor"></div><button class="add" data-add="supplies">+ Add row</button></div>
+  <div class="editor-section"><h3>Parking for Medical Appointments</h3><div id="parkingEditor"></div><button class="add" data-add="parking">+ Add row</button></div>
+  <div class="editor-section"><h3>Mileage to Medical Appointments</h3><div id="mileageEditor"></div><button class="add" data-add="mileage">+ Add row</button></div>
+  <div class="editor-section"><h3>Bus or Taxi Fare for Medical Appointments</h3><div id="busEditor"></div><button class="add" data-add="bus">+ Add row</button></div>
+  <div class="editor-section"><h3>Privacy Notice</h3><label class="checkline"><input type="checkbox" data-bool="privacy"> I understand that the Privacy Notice applies to the personal information collected in this document.</label></div>
+  <p class="note">The supplied reference has fixed two-page artwork. The default data keeps that artwork exact; added rows are supported in the editor and are laid out cleanly without overlapping existing content.</p>
+</div>
+<main id="report"></main>
+<script src="script.js"></script>
+</body></html>
